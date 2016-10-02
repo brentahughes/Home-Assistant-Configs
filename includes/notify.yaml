@@ -1,0 +1,4 @@
+- platform: slack
+  name: slack
+  api_key: !env_var SLACK_API_TOKEN
+  default_channel: '#testing'

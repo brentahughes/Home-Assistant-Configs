@@ -1,0 +1,28 @@
+- alias: "Brent Leave work"
+  trigger:
+    - platform: zone
+      entity_id: device_tracker.bhughes_nexus6
+      zone: zone.brent_work
+      event: leave
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.leaving_work
+        state: 'on'
+      - condition: time
+        after: '15:00:00'
+        before: '23:00:00'
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+  action:
+    service: notify.slack
+    data_template:
+      message: >
+        Brent is leaving work.
+        ETA: {{ states.sensor.brent_home_travel.attributes.duration_in_traffic }}
+      target: "@emmahughes"

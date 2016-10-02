@@ -1,0 +1,5 @@
+family:
+  name: Family
+  entities:
+    - device_tracker.bhughes_nexus6
+    - device_tracker.bhughes_emma_phone

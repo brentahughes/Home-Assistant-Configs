@@ -1,0 +1,51 @@
+rooms:
+  name: Rooms
+  view: yes
+  entities:
+    - group.master_bedroom_lighting
+    - media_player.bedroom
+    - group.office_lighting
+    - media_player.brent_office
+    - media_player.roku_1gn387145507
+    - media_player.roku_3__1gn387145507
+
+
+
+
+
+# OFFICE
+office_lights:
+  name: Office Lights
+  entities:
+    - light.office__closet
+    - light.office__desks
+    - light.office__tv
+    - light.office__window
+
+office_lighting:
+  name: Office Lighting
+  entities:
+    - group.office_lights
+    - scene.working
+    - scene.office_normal
+    - scene.office_dim
+    - scene.office_tv
+
+# MASTER BEDROOM
+master_bedroom_lights:
+  name: Master Bedroom Lights
+  entities:
+    - light.master_lights_level_2
+
+master_bedroom_lighting:
+  name: Master Bedroom Lighting
+  entities:
+    - group.master_bedroom_lights
+    - group.master_bedroom_bathroom
+    - scene.master_normal
+    - scene.master_relax
+
+master_bedroom_bathroom:
+  name: Master Bathroom
+  entities:
+    - switch.master_bathroom__switch_5

@@ -1,0 +1,154 @@
+device_tracker.bhughes_nexus6:
+  entity_picture: /local/brent.jpg
+  friendly_name: Brent
+device_tracker.bhughes_emma_phone:
+  entity_picture: /local/emma.jpg
+  friendly_name: Emma
+device_tracker.3d_printer:
+  icon: mdi:printer-3d
+  hidden: true
+device_tracker.home_server:
+  icon: mdi:server
+  hidden: true
+device_tracker.office_roku:
+  icon: mdi:television
+  hidden: true
+device_tracker.emma_surface:
+  icon: mdi:tablet
+device_tracker.brother_printer:
+  icon: mdi:printer
+  hidden: true
+device_tracker.philips_hue_bridge:
+  icon: mdi:lightbulb
+  hidden: true
+device_tracker.office_tv:
+  icon: mdi:television
+  hidden: true
+device_tracker.emma_kindle:
+  icon: mdi:tablet
+device_tracker.living_chromecast:
+  icon: mdi:television
+  hidden: true
+device_tracker.dns_server:
+  icon: mdi:server
+  hidden: true
+device_tracker.windows_server:
+  icon: mdi:server
+  hidden: true
+device_tracker.brent_nexus7:
+  icon: mdi:tablet
+device_tracker.wireless_ap:
+  icon: mdi:wifi
+  hidden: true
+device_tracker.office_chromecast:
+  icon: mdi:television
+  hidden: true
+device_tracker.nest_thermostat:
+  icon: mdi:thermometer
+  hidden: true
+device_tracker.amazon__dixie:
+  icon: mdi:amazon
+  hidden: true
+device_tracker.steam_link:
+  icon: mdi:gamepad-variant
+  hidden: true
+device_tracker.tivo_box:
+  icon: mdi:television
+  hidden: true
+device_tracker.living_tv:
+  icon: mdi:television
+  hidden: true
+device_tracker.brent_laptop_lan:
+  icon: mdi:laptop
+device_tracker.brent_laptop_wifi:
+  icon: mdi:laptop
+device_tracker.netgear_switch:
+  icon: mdi:switch
+  hidden: true
+device_tracker.emma_desktop:
+  icon: mdi:desktop-tower
+  hidden: true
+device_tracker.brent_work_phone:
+  icon: mdi:cellphone
+light.master_lights_level_2:
+  friendly_name: "Master - Light"
+  assumed_state: True
+switch.master_bathroom__switch_5:
+  friendly_name: "Master Bath - Main"
+  assumed_state: True
+light.kitchen_lights_level_3:
+  friendly_name: "Kitchen - Light"
+  assumed_state: True
+light.dining_lights_level_4:
+  friendly_name: "Dining - Light"
+  assumed_state: True
+light.kitchen_study_level_6:
+  friendly_name: "Dining - Study Light"
+  assumed_state: True
+sensor.speedtest_download:
+  friendly_name: "Download"
+sensor.speedtest_upload:
+  friendly_name: "Upload"
+sensor.speedtest_ping:
+  friendly_name: "Ping"
+device_tracker.amazon__gatorade:
+  hidden: true
+device_tracker.amazon__on:
+  hidden: true
+sensor.emma_location_to_home:
+  friendly_name: "Emma Home ETA"
+sensor.brent_location_to_home:
+  friendly_name: "Brent Home ETA"
+climate.hallwaymain_living:
+  friendly_name: "Nest Thermostat"
+media_player.living_room:
+  friendly_name: "Living - Chromecast"
+media_player.roku_2n0069550469:
+  friendly_name: "Living - Roku TV"
+media_player.lgroku_tv__2n0069550469:
+  friendly_name: "Living - Plex"
+media_player.bedroom:
+  friendly_name: "Master - Chromecast"
+media_player.brent_office:
+  friendly_name: "Office - Chromecast"
+media_player.roku_1gn387145507:
+  friendly_name: "Office - Roku"
+media_player.roku_3__1gn387145507:
+  friendly_name: "Office - Plex"
+sensor.forecastio_temperature:
+  friendly_name: "Temperature"
+sensor.forecastio_summary:
+  friendly_name: "Summary"
+sensor.forecastio_humidity:
+  friendly_name: "Humidity"
+sensor.forecastio_precip:
+  friendly_name: "Precip Type"
+sensor.forecastio_precip_probability:
+  friendly_name: "Precip Probability"
+
+
+################
+# TAB ORDERING #
+################
+group.home:
+  order: 1
+group.main_living:
+  order: 2
+group.rooms:
+  order: 3
+group.settings:
+  order: 5
+
+# HOME
+group.family_info:
+  order: 1
+group.travel_times:
+  order: 2
+group.scripts:
+  order: 3
+group.weather:
+  order: 4
+group.climate:
+  order: 5
+group.surveilance:
+  order: 6

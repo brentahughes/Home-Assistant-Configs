@@ -1,0 +1,12 @@
+- alias: "Turn off all kitchen lights"
+  trigger:
+    - platform: state
+      entity_id: light.kitchen_lights_level_3
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: input_boolean.kitchen_all_off
+      state: 'on'
+  action:
+    service: light.turn_off
+    entity_id: light.dining_lights_level_4

@@ -1,0 +1,8 @@
+alias: House Shutdown
+sequence:
+  - service: light.turn_off
+    data:
+      entity_id: group.all_lights
+  - service: switch.turn_off
+    data:
+      entity_id: group.all_switches

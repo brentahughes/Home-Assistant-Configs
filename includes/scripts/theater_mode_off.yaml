@@ -1,0 +1,8 @@
+alias: Theater Mode Off
+sequence:
+  - service: scene.turn_on
+    data:
+      entity_id: scene.living_normal
+  - service: scene.turn_on
+    data:
+      entity_id: scene.kitchen_normal

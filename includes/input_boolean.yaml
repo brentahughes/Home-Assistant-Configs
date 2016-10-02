@@ -1,0 +1,61 @@
+###############
+# Automations #
+###############
+work_alarm:
+  name: Wake Alarm
+  icon: mdi:alarm
+  initial: on
+
+house_away:
+  name: Auto House Away
+  icon: mdi:home
+  initial: on
+
+leaving_work:
+  name: Leaving Work Notifications
+  icon: mdi:comment-text
+  initial: on
+
+kitchen_all_off:
+  name: Kitchen All Lights Off
+  icon: mdi:lightbulb
+  initial: on
+
+kitchen_study_auto:
+  name: Kitchen Study Auto
+  icon: mdi:lightbulb
+  initial: on
+
+thermostat_auto:
+  name: Thermostat Auto Control
+  icon: mdi:nest-thermostat
+  initial: on
+
+# Media
+media_living:
+  name: Media Living Lights
+  icon: mdi:lightbulb
+  initial: off
+
+media_office:
+  name: Media Office Lights
+  icon: mdi:lightbulb
+  initial: off
+
+
+# Dash Buttons
+dixie_theater:
+  name: Dixie - Theater Mode
+  icon: mdi:theater
+  initial: on
+
+gatorade_office_light:
+  name: Gatorade - Office Lighting
+  icon: mdi:lightbulb
+  initial: on
+
+on_master_light:
+  name: On - Master Lighting
+  icon: mdi:lightbulb
+  initial: on
+

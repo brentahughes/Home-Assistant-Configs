@@ -1,0 +1,11 @@
+alias: Nobody Home
+sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.house_shutdown
+  - condition: state
+    entity_id: input_boolean.thermostat_auto
+    state: 'on'
+  - service: climate.set_away_mode
+    data:
+      away_mode: on

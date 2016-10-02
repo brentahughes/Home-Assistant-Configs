@@ -1,0 +1,50 @@
+- alias: "Nest While Home"
+  trigger:
+    - platform: template
+      value_template: "{% if is_state_attr('climate.hallwaymain_living', 'away_mode', 'on') %}true{% endif %}"
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: group.family
+        state: 'home'
+      - condition: state
+        entity_id: input_boolean.thermostat_auto
+        state: 'on'
+  action:
+    service: climate.set_away_mode
+    data:
+      away_mode: off
+
+
+- alias: "Arriving Home"
+  trigger:
+    - platform: state
+      entity_id: group.family
+      from: 'not_home'
+      to: 'home'
+  condition:
+    - condition: state
+      entity_id: input_boolean.thermostat_auto
+      state: 'on'
+  action:
+    service: climate.set_away_mode
+    data:
+      away_mode: off
+
+
+- alias: "Nobody Home"
+  trigger:
+    - platform: state
+      entity_id: group.family
+      from: 'home'
+      to: 'not_home'
+      for:
+        minutes: 30
+  condition:
+    - condition: state
+      entity_id: input_boolean.house_away
+      state: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.nobody_home

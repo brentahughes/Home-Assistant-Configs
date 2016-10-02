@@ -1,0 +1,53 @@
+settings:
+  name: Settings
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.global
+    - group.input_kitchen
+    - group.input_media
+    - group.input_notification
+    - group.input_amazon_dash
+    - group.wake_alarm
+
+
+
+global:
+  name: global
+  entities:
+    - input_boolean.house_away
+    - input_boolean.thermostat_auto
+
+
+wake_alarm:
+  name: Wake Alarm
+  entities:
+    - input_boolean.work_alarm
+    - input_select.work_alarm_time
+
+input_kitchen:
+  name: Kitchen
+  entities:
+    - input_boolean.kitchen_all_off
+    - input_boolean.kitchen_study_auto
+    - input_select.kitchen_study_on_time
+    - input_select.kitchen_study_off_time
+
+input_notification:
+  name: Notifications
+  entities:
+    - input_boolean.new_device
+    - input_boolean.leaving_work
+
+input_media:
+  name: Media Lighting
+  entities:
+    - input_boolean.media_living
+    - input_boolean.media_office
+
+input_amazon_dash:
+  name: Dash Buttons
+  entities:
+    - input_boolean.on_master_light
+    - input_boolean.dixie_theater
+    - input_boolean.gatorade_office_light

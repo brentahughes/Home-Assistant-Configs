@@ -1,0 +1,11 @@
+- platform: nmap_tracker
+  hosts: 192.168.1.2-254
+  home_interval: 300
+
+- platform: owntracks
+
+- platform: unifi
+  host: 192.168.1.10
+  port: 8443
+  username: !env_var UNIFI_USERNAME
+  password: !env_var UNIFI_PASSWORD

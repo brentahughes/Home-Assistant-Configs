@@ -1,0 +1,124 @@
+##########
+# OFFICE #
+##########
+- name: Office Normal
+  entities:
+    group.office_lights:
+      state: on
+      brightness: 254
+
+- name: Working
+  entities:
+    light.office__closet:
+        state: on
+        brightness: 225
+    light.office__desks:
+        state: on
+        brightness: 75
+    light.office__tv:
+        state: on
+        brightness: 75
+    light.office__window:
+        state: on
+        brightness: 225
+
+- name: Office Dim
+  entities:
+    group.office_lights:
+      state: on
+      brightness: 75
+
+- name: Office Tv
+  entities:
+    light.office__closet:
+        state: off
+    light.office__desks:
+        state: on
+        brightness: 75
+    light.office__tv:
+        state: on
+        brightness: 75
+    light.office__window:
+        state: off
+
+
+###############
+# LIVING ROOM #
+###############
+- name: Living Normal
+  entities:
+    group.living_lights:
+      state: on
+      brightness: 254
+      xy_color: [0.4596, 0.4105]
+
+- name: Living Dim
+  entities:
+    group.living_lights:
+      state: on
+      brightness: 75
+      xy_color: [0.4596, 0.4105]
+
+- name: Living Movie
+  entities:
+    light.living__br:
+      state: off
+    light.living__bl:
+      state: off
+    light.living__fr:
+      state: on
+      brightness: 1
+      rgb_color: [44, 45, 173]
+    light.living__fl:
+      state: on
+      brightness: 1
+      rgb_color: [44, 45, 173]
+    group.kitchen_lights:
+      state: off
+
+
+##################
+# MASTER BEDROOM #
+##################
+- name: Master Normal
+  entities:
+    group.master_bedroom_lights:
+      state: on
+      brightness: 255
+
+- name: Master Relax
+  entities:
+    group.master_bedroom_lights:
+      state: on
+      brightness: 100
+
+
+###########
+# KITCHEN #
+###########
+- name: Kitchen Normal
+  entities:
+    group.kitchen_lights:
+      state: on
+      brightness: 255
+
+- name: Kitchen Nightlight
+  entities:
+    light.kitchen_lights_level_3:
+      state: on
+      brightness: 25
+    light.kitchen_study_level_6:
+      state: off
+    light.dining_lights_level_4:
+      state: off
+
+- name: Kitchen Eating
+  entities:
+    light.dining_lights_level_4:
+      state: on
+      brightness: 255
+    light.kitchen_lights_level_3:
+      state: on
+      brightness: 100
+    light.kitchen_study_level_6:
+      state: off

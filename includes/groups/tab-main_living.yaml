@@ -1,0 +1,45 @@
+main_living:
+  name: Main Living
+  view: yes
+  entities:
+    - group.living_lights
+    - group.living_lighting
+    - media_player.living_room
+    - media_player.roku_2n0069550469
+    - media_player.lgroku_tv__2n0069550469
+    - group.kitchen_lights
+    - group.kitchen_lighting
+
+
+
+
+# LIVING ROOM
+living_lights:
+  name: Living Room Lights
+  entities:
+    - light.living__br
+    - light.living__bl
+    - light.living__fr
+    - light.living__fl
+
+living_lighting:
+  name: Living Lighting
+  entities:
+    - scene.living_normal
+    - scene.living_movie
+    - scene.living_dim
+
+# KITCHEN
+kitchen_lights:
+  name: Kitchen Lights
+  entities:
+    - light.kitchen_lights_level_3
+    - light.dining_lights_level_4
+    - light.kitchen_study_level_6
+
+kitchen_lighting:
+  name: Kitchen Lighting
+  entities:
+    - scene.kitchen_normal
+    - scene.kitchen_nightlight
+    - scene.kitchen_eating

@@ -1,0 +1,48 @@
+- alias: "Wakeup - Work"
+  trigger:
+    platform: time
+    after: "06:15:00"
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: input_boolean.work_alarm
+      state: 'on'
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    service: script.turn_on
+    entity_id: script.master_6am_wakeup_weekday
+
+
+- alias: "Kitchen Study On"
+  trigger:
+    platform: time
+    after: "19:00:00"
+  condition:
+    - condition: state
+      entity_id: input_boolean.kitchen_study_auto
+      state: 'on'
+  action:
+    service: light.turn_on
+    entity_id: light.kitchen_study_level_6
+    data:
+      brightness: 25
+
+
+- alias: "Kitchen Study Off"
+  trigger:
+    platform: time
+    after: "07:00:00"
+  condition:
+    - condition: state
+      entity_id: input_boolean.kitchen_study_auto
+      state: 'on'
+  action:
+    service: light.turn_off
+    entity_id: light.kitchen_study_level_6

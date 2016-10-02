@@ -1,0 +1,13 @@
+- platform: mqtt
+  state_topic: "owntracks/bhughes/nexus6"
+  name: "Brent Phone Battery"
+  qos: 0
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.batt }}'
+
+- platform: mqtt
+  state_topic: "owntracks/bhughes/emma_phone"
+  name: "Emma Phone Battery"
+  qos: 0
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.batt }}'

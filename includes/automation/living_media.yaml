@@ -1,0 +1,54 @@
+- alias: "Living Room Chromecast playing"
+  trigger:
+    - platform: state
+      entity_id: media_player.living_room
+      to: 'playing'
+  condition:
+    - condition: state
+      entity_id: input_boolean.media_living
+      state: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.living_dim
+
+
+- alias: "Living Room Chromecast paused/stopped"
+  trigger:
+    - platform: state
+      entity_id: media_player.living_room
+      from: 'playing'
+  condition:
+    - condition: state
+      entity_id: input_boolean.media_living
+      state: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.living_normal
+
+
+- alias: "Living Room Roku playing"
+  trigger:
+    - platform: state
+      entity_id: media_player.roku_2n0069550469
+      to: 'playing'
+  condition:
+    - condition: state
+      entity_id: input_boolean.media_living
+      state: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.living_dim
+
+
+- alias: "Living Room Roku paused/stopped"
+  trigger:
+    - platform: state
+      entity_id: media_player.roku_2n0069550469
+      from: 'playing'
+  condition:
+    - condition: state
+      entity_id: input_boolean.media_living
+      state: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.living_normal

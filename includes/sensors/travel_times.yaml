@@ -1,0 +1,23 @@
+- platform: google_travel_time
+  name: Brent Work Travel
+  api_key: !env_var GOOGLE_API
+  origin: Home
+  destination: Brent Work
+
+- platform: google_travel_time
+  name: Brent Home Travel
+  api_key: !env_var GOOGLE_API
+  origin: Brent Work
+  destination: Home
+
+- platform: google_travel_time
+  name: Brent Location To Home
+  api_key: !env_var GOOGLE_API
+  origin: device_tracker.bhughes_nexus6
+  destination: Home
+
+- platform: google_travel_time
+  name: Emma Location To Home
+  api_key: !env_var GOOGLE_API
+  origin: device_tracker.bhughes_emma_phone
+  destination: Home

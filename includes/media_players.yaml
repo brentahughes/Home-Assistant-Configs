@@ -1,0 +1,3 @@
+- platform: plex
+- platform: cast
+- platform: roku

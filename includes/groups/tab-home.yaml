@@ -1,0 +1,54 @@
+default_view:
+  view: yes
+  entities:
+    - group.weather
+    - group.climate
+    - group.family_info
+    - group.travel_times
+    - group.scripts
+    - group.surveilance
+
+
+
+
+
+family_info:
+  name: Family Info
+  entities:
+    - device_tracker.bhughes_emma_phone
+    - device_tracker.bhughes_nexus6
+    - sensor.brent_phone_battery
+    - sensor.emma_phone_battery
+    - sensor.emma_location_to_home
+    - sensor.brent_location_to_home
+
+climate:
+  name: Climate
+  entities:
+    - climate.hallwaymain_living
+
+weather:
+  name: weather
+  entities:
+    - sensor.forecastio_summary
+    - sensor.forecastio_temperature
+    - sensor.forecastio_humidity
+    - sensor.forecastio_precip
+    - sensor.forecastio_precip_probability
+
+travel_times:
+  name: Travel Times
+  entities:
+    - sensor.brent_home_travel
+    - sensor.brent_work_travel
+
+scripts:
+  name: Scripts
+  entities:
+    - script.house_shutdown
+
+surveilance:
+  name: Surveilance
+  entities:
+    - camera.front_door
+    - camera.driveway

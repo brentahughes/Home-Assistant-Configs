@@ -1,0 +1,298 @@
+emma_surface:
+  name: Emma Surface
+  mac: 60:45:BD:72:0F:F6
+  picture:
+  track: yes
+  hide_if_away: yes
+
+bhughes_nexus6:
+  name: Brent Phone
+  mac:
+  picture:
+  track: yes
+  hide_if_away: no
+
+bhughes_emma_phone:
+  name: Emma Phone
+  mac:
+  picture:
+  track: yes
+  hide_if_away: no
+
+amazon__dixie:
+  name: Amazon - Dixie
+  mac: F0:27:2D:89:4E:E5
+  picture:
+  track: yes
+  hide_if_away: yes
+
+steam_link:
+  name: Steam Link
+  mac: E0:31:9E:26:4F:6A
+  picture:
+  track: yes
+  hide_if_away: no
+
+tivo_box:
+  name: Tivo Box
+  mac: 00:11:D9:83:E7:59
+  picture:
+  track: yes
+  hide_if_away: no
+
+netgear_switch:
+  name: Netgear Switch
+  mac: C4:04:15:A8:63:B9
+  picture:
+  track: yes
+  hide_if_away: no
+
+dns_server:
+  name: DNS Server
+  mac: B8:27:EB:03:21:21
+  picture:
+  track: yes
+  hide_if_away: no
+
+windows_server:
+  name: Windows Server
+  mac: 00:1F:BC:02:6C:0D
+  picture:
+  track: yes
+  hide_if_away: no
+
+emma_desktop:
+  name: Emma Desktop
+  mac: D4:3D:7E:4B:AD:B7
+  picture:
+  track: yes
+  hide_if_away: no
+
+home_server:
+  name: Home Server
+  mac: D4:3D:7E:C0:4D:A4
+  picture:
+  track: yes
+  hide_if_away: no
+
+philips_hue_bridge:
+  name: Philips Hue Bridge
+  mac: 00:17:88:10:9D:29
+  picture:
+  track: yes
+  hide_if_away: no
+
+nest_thermostat:
+  name: Nest Thermostat
+  mac: 18:B4:30:06:6A:4F
+  picture:
+  track: yes
+  hide_if_away: no
+
+brent_nexus7:
+  name: Brent Nexus7
+  mac: 50:46:5D:7B:B2:E9
+  picture:
+  track: yes
+  hide_if_away: yes
+
+office_roku:
+  name: Office - Roku
+  mac: B8:3E:59:B1:39:8B
+  picture:
+  track: yes
+  hide_if_away: yes
+
+3d_printer:
+  name: 3d Printer
+  mac: 80:1F:02:F5:38:60
+  picture:
+  track: yes
+  hide_if_away: no
+
+brother_printer:
+  name: Brother Printer
+  mac: BC:85:56:2D:46:03
+  picture:
+  track: yes
+  hide_if_away: no
+
+office_chromecast:
+  name: Office - Chromecast
+  mac: 80:D2:1D:45:6C:DD
+  picture:
+  track: yes
+  hide_if_away: yes
+
+office_tv:
+  name: Office - TV
+  mac: 78:BD:BC:DB:8D:F9
+  picture:
+  track: yes
+  hide_if_away: yes
+
+living_tv:
+  name: Living - TV
+  mac: 30:52:CB:AC:3D:75
+  picture:
+  track: yes
+  hide_if_away: yes
+
+brent_laptop_wifi:
+  name: Brent Laptop WIFI
+  mac: 3C:15:C2:C6:2F:48
+  picture:
+  track: yes
+  hide_if_away: yes
+
+brent_laptop_lan:
+  name: Brent Laptop LAN
+  mac: EC:1A:59:C2:98:A9
+  picture:
+  track: yes
+  hide_if_away: yes
+
+emma_kindle:
+  name: Emma Kindle
+  mac: 00:BB:3A:0A:06:3F
+  picture:
+  track: yes
+  hide_if_away: yes
+
+living_chromecast:
+  name: Living - Chromecast
+  mac: A4:77:33:D7:AD:EC
+  picture:
+  track: yes
+  hide_if_away: yes
+
+wireless_ap:
+  name: Wirless Access Point
+  mac: 04:18:D6:CE:0C:29
+  picture:
+  track: yes
+  hide_if_away: no
+
+brent_work_phone:
+  name: Brent Work Phone
+  mac: E8:50:8B:ED:8C:96
+  picture:
+  track: yes
+  hide_if_away: yes
+
+hannah_phone:
+  name: Hannah Phone
+  mac: A4:B8:05:94:34:0E
+  picture:
+  track: yes
+  hide_if_away: yes
+
+amazon__gatorade:
+  name: Amazon - Gatorade
+  mac: F0:27:2D:9E:2D:2A
+  picture:
+  track: yes
+  hide_if_away: yes
+
+amazon__on:
+  name: Amazon - On
+  mac: 44:65:0D:1C:4F:45
+  picture:
+  track: yes
+  hide_if_away: yes
+
+bhughesosx:
+  name: BHUGHES-OSX
+  mac: F4:5C:89:B3:8F:FB
+  picture:
+  track: yes
+  hide_if_away: yes
+
+adam_phone:
+  name: Adam Phone
+  mac: E8:91:20:A8:F4:C5
+  picture:
+  track: yes
+  hide_if_away: yes
+
+windows_game_server:
+  name: Game Server
+  mac: E0:31:9E:26:4F:69
+  picture:
+  track: yes
+  hide_if_away: yes
+
+amazon__clorox:
+  name: Amazon - Clorox
+  mac: A0:02:DC:F9:1E:AB
+  picture:
+  track: yes
+  hide_if_away: yes
+
+master__chromecast:
+  name: Master - Chromecast
+  mac: 80:D2:1D:27:F4:6A
+  picture:
+  track: yes
+  hide_if_away: yes
+
+raspberry_pi_3b:
+  name: 192.168.1.25
+  mac: B8:27:EB:61:A8:7D
+  picture:
+  track: yes
+  hide_if_away: yes
+
+emma_phone_wifi:
+  name: Emma Phone - Wifi
+  mac: F8:A9:D0:07:89:FB
+  picture:
+  track: yes
+  hide_if_away: yes
+
+brent_phone_wifi:
+  name: Brent Phone - Wifi
+  mac: E8:91:20:9F:1B:58
+  picture:
+  track: yes
+  hide_if_away: yes
+
+dlinkap:
+  name: Dlink Access Point
+  mac: 78:54:2E:A3:5A:BA
+  picture:
+  track: yes
+  hide_if_away: yes
+
+
+###################
+# UNKNOWN DEVICES #
+###################
+
+7824af9a5e9e:
+  name: 7824af9a5e9e
+  mac: 78:24:AF:9A:5E:9E
+  picture: 
+  track: yes
+  hide_if_away: no
+
+a002dc5db21e:
+  name: a002dc5db21e
+  mac: A0:02:DC:5D:B2:1E
+  picture: 
+  track: yes
+  hide_if_away: no
+
+64bc0c433ac7:
+  name: 64bc0c433ac7
+  mac: 64:BC:0C:43:3A:C7
+  picture: 
+  track: yes
+  hide_if_away: no
+
+bhughes_nexus5:
+  name: bhughes
+  mac: 
+  picture: 
+  track: yes
+  hide_if_away: no

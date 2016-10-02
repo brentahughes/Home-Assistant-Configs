@@ -1,0 +1,116 @@
+homeassistant:
+  name: Hughes House
+  latitude: !env_var HOME_LATITUDE
+  longitude: !env_var HOME_LONGITUDE
+  unit_system: imperial
+  time_zone: America/Chicago
+  elevation: 178
+
+  customize: !include customize.yaml
+
+http:
+  api_password: !env_var HA_PASSWORD
+  server_port: 8123
+
+recorder:
+  db_url: !env_var MYSQL_CONNECTION_STRING
+
+
+
+
+
+##############
+# COMPONENTS #
+##############
+light:
+  platform: hue
+  host: 192.168.1.9
+  allow_unreachable: true
+
+climate:
+  platform: nest
+
+nest:
+  username: !env_var NEST_EMAIL
+  password: !env_var NEST_PASSWORD
+
+mqtt:
+  broker: 192.168.1.10
+  port: 1883
+  username: !env_var MQTT_USERNAME
+  password: !env_var MQTT_PASSWORD
+
+zwave:
+  usb_path: /dev/zwave
+  config_path: /usr/local/share/python-openzwave/config
+  polling_interval: 40000
+
+statsd:
+  host: 192.168.1.10
+  port: 8125
+  prefix: !env_var STATSD_PREFIX
+  rate: 1
+  log_attributes: true
+
+
+
+
+#########
+# ZONES #
+#########
+zone 1:
+  name: Home
+  latitude: !env_var HOME_LATITUDE
+  longitude: !env_var HOME_LONGITUDE
+  radius: 300
+  icon: mdi:home
+
+zone 2:
+  name: Brent Work
+  latitude: !env_var BRENT_WORK_LATITUDE
+  longitude: !env_var BRENT_WORK_LONGITUDE
+  radius: 300
+  icon: mdi:briefcase
+
+
+
+
+
+############
+# INCLUDES #
+############
+group: !include_dir_merge_named includes/groups
+sensor: !include_dir_merge_list includes/sensors
+device_tracker: !include includes/device_trackers.yaml
+media_player: !include includes/media_players.yaml
+scene: !include includes/scenes.yaml
+notify: !include includes/notify.yaml
+script: !include_dir_named includes/scripts
+automation: !include_dir_merge_list includes/automation
+input_boolean: !include includes/input_boolean.yaml
+camera: !include includes/cameras.yaml
+
+
+
+
+
+##########
+# EXTRAS #
+##########
+logger:
+  default: error
+  logs:
+    homeassistant: !env_var HA_LOG_LEVEL
+    homeassistant.core: error
+    homeassistant.components.api: error
+    homeassistant.components.recorder: error
+    homeassistant.components.device_tracker.nmap_tracker: error
+    homeassistant.components.statsd: error
+    homeassistant.components.mqtt: error
+    homeassistant.components.sensor.command_line: error
+    homeassistant.components.sensor.google_travel_time: error
+
+discovery:
+frontend:
+history:
+logbook:

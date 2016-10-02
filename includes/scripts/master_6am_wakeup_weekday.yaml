@@ -1,0 +1,61 @@
+alias: Work Day Wakeup
+sequence:
+  # Sweep light brightness up to full brightness
+  - service: light.turn_on
+    data:
+      entity_id: light.master_lights_level_2
+      brightness: 25
+  - delay:
+      seconds: 5
+  - service: light.turn_on
+    data:
+      entity_id: light.master_lights_level_2
+      brightness: 50
+  - delay:
+      seconds: 5
+  - service: light.turn_on
+    data:
+      entity_id: light.master_lights_level_2
+      brightness: 75
+  - delay:
+      seconds: 5
+  - service: light.turn_on
+    data:
+      entity_id: light.master_lights_level_2
+      brightness: 100
+  - delay:
+      seconds: 5
+  - service: light.turn_on
+    data:
+      entity_id: light.master_lights_level_2
+      brightness: 125
+  - delay:
+      seconds: 5
+  - service: light.turn_on
+    data:
+      entity_id: light.master_lights_level_2
+      brightness: 150
+  - delay:
+      seconds: 5
+  - service: light.turn_on
+    data:
+      entity_id: light.master_lights_level_2
+      brightness: 175
+  - delay:
+      seconds: 5
+  - service: light.turn_on
+    data:
+      entity_id: light.master_lights_level_2
+      brightness: 200
+  - delay:
+      seconds: 5
+  - service: light.turn_on
+    data:
+      entity_id: light.master_lights_level_2
+      brightness: 225
+  - delay:
+      seconds: 5
+  - service: light.turn_on
+    data:
+      entity_id: light.master_lights_level_2
+      brightness: 255
