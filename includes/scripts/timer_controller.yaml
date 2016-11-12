@@ -1,0 +1,8 @@
+alias: "Timer Controller"
+sequence:
+  - service: script.turn_off
+    data_template:
+       entity_id: '{{ entity }}'
+  - service: script.turn_on
+    data_template:
+      entity_id: '{{ entity }}'

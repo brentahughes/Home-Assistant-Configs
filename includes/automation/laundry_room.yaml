@@ -1,0 +1,29 @@
+- alias: "Turn on laundry room light when Emma arrives home"
+  trigger:
+    - platform: state
+      entity_id: group.emma
+      to: 'home'
+  action:
+    service: switch.turn_on
+    entity_id: switch.utility_room_switch_5_0
+
+- alias: "Turn on laundry room light when Brent arrives home"
+  trigger:
+    - platform: state
+      entity_id: group.brent
+      to: 'home'
+  action:
+    service: switch.turn_on
+    entity_id: switch.utility_room_switch_5_0
+
+- alias: "Turn on laundry room light for 10 minutes"
+  trigger:
+    - platform: state
+      entity_id: switch.utility_room_switch_5_0
+      to: 'on'
+  action:
+    service: script.turn_on
+    data:
+      entity_id: script.timer_controller
+      variables:
+        entity: script.laundry_room_light_timer

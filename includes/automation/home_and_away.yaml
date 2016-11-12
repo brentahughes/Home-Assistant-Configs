@@ -1,16 +1,11 @@
 - alias: "Nest While Home"
   trigger:
     - platform: template
-      value_template: "{% if is_state_attr('climate.hallwaymain_living', 'away_mode', 'on') %}true{% endif %}"
+      value_template: "{% if is_state_attr('climate.thermostat', 'away_mode', 'on') %}true{% endif %}"
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: group.family
-        state: 'home'
-      - condition: state
-        entity_id: input_boolean.thermostat_auto
-        state: 'on'
+    - condition: state
+      entity_id: group.family
+      state: 'home'
   action:
     service: climate.set_away_mode
     data:
@@ -23,10 +18,6 @@
       entity_id: group.family
       from: 'not_home'
       to: 'home'
-  condition:
-    - condition: state
-      entity_id: input_boolean.thermostat_auto
-      state: 'on'
   action:
     service: climate.set_away_mode
     data:
@@ -41,10 +32,6 @@
       to: 'not_home'
       for:
         minutes: 30
-  condition:
-    - condition: state
-      entity_id: input_boolean.house_away
-      state: 'on'
   action:
     service: script.turn_on
     entity_id: script.nobody_home

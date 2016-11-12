@@ -1,0 +1,76 @@
+LivingTvCommandIntent:
+  action:
+    service_template: >
+      {% if states.media_player.roku_2n0069550469.state == "Streaming box" %}
+        {% if command.lower() in ['play', 'pause'] %}
+          {% set action = 'media_play' %}
+        {% elif command.lower() == "stop" %}
+          {% set action = 'media_stop' %}
+        {% elif command.lower() in ['skip', 'next'] %}
+          {% set action = 'media_next_track' %}
+        {% elif command.lower() in ['back', 'previous'] %}
+          {% set action = 'media_previous_track' %}
+        {% endif %}
+
+        {% if action is defined %}
+          media_player.{{ action }}
+        {% endif %}
+      {% else %}
+        media_player.media_stop
+      {% endif %}
+    data:
+      entity_id: media_player.living_room
+  speech:
+    type: plaintext
+    text: >
+      {% if states.media_player.roku_2n0069550469.state == "Streaming box" %}
+        {% if command.lower() == "play" %}
+          TV playing
+        {% elif command.lower() == "pause" %}
+          TV paused
+        {% elif command.lower() == "stop" %}
+          TV stopped
+        {% elif command.lower() in ['skip', 'next'] %}
+          TV skipped
+        {% elif command.lower() in ['back', 'previous'] %}
+          TV back
+        {% else %}
+          I do not know how to {{ command }}
+        {% endif %}
+      {% else %}
+        Media control is not supported on the roku
+      {% endif %}
+
+
+
+LivingTvAppIntent:
+  action:
+    service: media_player.select_source
+    data_template:
+      entity_id: media_player.roku_2n0069550469
+      source: >
+        {% if app is not defined %}
+          Home
+        {% else %}
+          {% if app.lower() == 'netflix' %}
+            Netflix
+          {% elif app.lower() == 'hulu' %}
+            Hulu
+          {% elif app.lower() == 'plex' %}
+            Plex
+          {% elif app.lower() == 'hbo' %}
+            HBO NOW
+          {% elif app.lower() == 'amazon' %}
+            Amazon Video
+          {% elif app.lower() == 'chrome cast' %}
+            Streaming box
+          {% endif %}
+        {% endif %}
+  speech:
+    type: plaintext
+    text: >
+      {% if app is not defined %}
+        exiting to main menu
+      {% else %}
+        switching to {{ app }}
+      {% endif %}

@@ -2,3 +2,8 @@
   name: slack
   api_key: !env_var SLACK_API_TOKEN
   default_channel: '#testing'
+
+- platform: html5
+  name: chrome
+  gcm_api_key: !env_var CHROME_PUSH_API
+  gcm_sender_id: !env_var CHROME_PUSH_ID

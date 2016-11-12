@@ -1,4 +1,4 @@
-- platform: forecast
+- platform: darksky
   api_key: !env_var DARK_SKY_API
   monitored_conditions:
     - summary
@@ -8,3 +8,19 @@
     - humidity
     - temperature_max
     - temperature_min
+
+- platform: nest
+  monitored_conditions:
+    - 'temperature'
+    - 'target'
+    - 'humidity'
+    - 'operation_mode'
+
+
+- platform: mqtt
+  name: Camera - Front Door
+  state_topic: "security/cameras/front_door"
+
+- platform: mqtt
+  name: Camera - Driveway
+  state_topic: "security/cameras/driveway"

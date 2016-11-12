@@ -9,6 +9,7 @@ main_living:
     - media_player.lgroku_tv__2n0069550469
     - group.kitchen_lights
     - group.kitchen_lighting
+    - group.utility_lights
 
 
 
@@ -33,13 +34,17 @@ living_lighting:
 kitchen_lights:
   name: Kitchen Lights
   entities:
-    - light.kitchen_lights_level_3
-    - light.dining_lights_level_4
-    - light.kitchen_study_level_6
+    - light.kitchen_lights_level_3_0
+    - light.dining_lights_level_4_0
+    - light.kitchen_study_level_6_0
 
 kitchen_lighting:
   name: Kitchen Lighting
   entities:
     - scene.kitchen_normal
     - scene.kitchen_nightlight
-    - scene.kitchen_eating
+
+utility_lights:
+  name: Utility Lights
+  entities:
+    - switch.utility_room_switch_5_0

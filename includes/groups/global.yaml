@@ -1,5 +1,15 @@
 family:
   name: Family
   entities:
+    - group.brent
+    - group.emma
+
+brent:
+  name: Brent
+  entities:
     - device_tracker.bhughes_nexus6
+
+emma:
+  name: Emma
+  entities:
     - device_tracker.bhughes_emma_phone

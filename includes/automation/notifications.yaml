@@ -5,20 +5,15 @@
       zone: zone.brent_work
       event: leave
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: input_boolean.leaving_work
-        state: 'on'
-      - condition: time
-        after: '15:00:00'
-        before: '23:00:00'
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
+    - condition: time
+      after: '15:00:00'
+      before: '23:00:00'
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
   action:
     service: notify.slack
     data_template:
@@ -26,3 +21,62 @@
         Brent is leaving work.
         ETA: {{ states.sensor.brent_home_travel.attributes.duration_in_traffic }}
       target: "@emmahughes"
+
+
+- alias: "Emma Leave Home"
+  trigger:
+    - platform: zone
+      entity_id: group.emma
+      zone: zone.home
+      event: leave
+  condition:
+    - condition: template
+      value_template: '{{ states.group.brent.state != "home" }}'
+  action:
+    service: notify.chrome
+    data:
+      title: "Emma Location Update"
+      message: >
+        Emma has left the house.
+      data:
+        url: "https://192.168.1.10/home/map"
+      target:
+        - brent_macbookpro
+        - brent_phone
+        - brent_work_macbookpro
+
+- alias: "Front Door Motion"
+  trigger:
+    - platform: state
+      entity_id: sensor.camera__front_door
+      to: 'motion'
+  action:
+    service: notify.chrome
+    data:
+      title: "Front Door Movement"
+      message: "Motion captured at front door"
+      data:
+        url: "https://192.168.1.10/cam"
+        tag: 'front_door_motion'
+      target:
+        - brent_macbookpro
+        - brent_phone
+        - brent_work_macbookpro
+
+- alias: "Driveway Motion"
+  trigger:
+    - platform: state
+      entity_id: sensor.camera__driveway
+      to: 'motion'
+  action:
+    service: notify.chrome
+    data:
+      title: "Driveway Movement"
+      message: "Motion captured in driveway"
+      data:
+        url: "https://192.168.1.10/cam"
+        tag: 'driveway_motion'
+      target:
+        - brent_macbookpro
+        - brent_phone
+        - brent_work_macbookpro

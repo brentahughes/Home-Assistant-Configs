@@ -3,9 +3,8 @@ rooms:
   view: yes
   entities:
     - group.master_bedroom_lighting
-    - media_player.bedroom
+    - media_player.master_bedroom
     - group.office_lighting
-    - media_player.brent_office
     - media_player.roku_1gn387145507
     - media_player.roku_3__1gn387145507
 
@@ -35,17 +34,23 @@ office_lighting:
 master_bedroom_lights:
   name: Master Bedroom Lights
   entities:
-    - light.master_lights_level_2
+    - light.master_lights_level_2_0
 
 master_bedroom_lighting:
   name: Master Bedroom Lighting
   entities:
     - group.master_bedroom_lights
     - group.master_bedroom_bathroom
+    - group.master_hallway
     - scene.master_normal
     - scene.master_relax
 
 master_bedroom_bathroom:
   name: Master Bathroom
   entities:
-    - switch.master_bathroom__switch_5
+    - light.master_bathroom_level_7_0
+
+master_hallway:
+  name: Master Hallway
+  entities:
+    - light.master_hallway_level_8_0

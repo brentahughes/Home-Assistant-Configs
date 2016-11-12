@@ -4,9 +4,8 @@
       entity_id: media_player.living_room
       to: 'playing'
   condition:
-    - condition: state
-      entity_id: input_boolean.media_living
-      state: 'on'
+    - condition: template
+      value_template: '{{ states.light.living__bl.state != "off" }}'
   action:
     service: scene.turn_on
     entity_id: scene.living_dim
@@ -18,9 +17,8 @@
       entity_id: media_player.living_room
       from: 'playing'
   condition:
-    - condition: state
-      entity_id: input_boolean.media_living
-      state: 'on'
+    - condition: template
+      value_template: '{{ states.light.living__bl.state != "off" }}'
   action:
     service: scene.turn_on
     entity_id: scene.living_normal
@@ -32,9 +30,8 @@
       entity_id: media_player.roku_2n0069550469
       to: 'playing'
   condition:
-    - condition: state
-      entity_id: input_boolean.media_living
-      state: 'on'
+    - condition: template
+      value_template: '{{ states.light.living__bl.state != "off" }}'
   action:
     service: scene.turn_on
     entity_id: scene.living_dim
@@ -46,9 +43,8 @@
       entity_id: media_player.roku_2n0069550469
       from: 'playing'
   condition:
-    - condition: state
-      entity_id: input_boolean.media_living
-      state: 'on'
+    - condition: template
+      value_template: '{{ states.light.living__bl.state != "off" }}'
   action:
     service: scene.turn_on
     entity_id: scene.living_normal

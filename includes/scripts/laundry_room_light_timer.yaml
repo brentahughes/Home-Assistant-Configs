@@ -1,0 +1,6 @@
+alias: "Laundry Room Light Timer"
+sequence:
+  - delay: '00:10:00'
+  - service: homeassistant.turn_off
+    data:
+      entity_id: switch.utility_room_switch_5_0

@@ -1,0 +1,30 @@
+LocateIntent:
+  action:
+    service: notify.chrome
+    data_template:
+      title: "Alexa Lookup"
+      message: >
+        {{ User }} is being spied on
+      target:
+        - brent_phone
+  speech:
+    type: plaintext
+    text: >
+      {%- for state in states.device_tracker -%}
+        {%- if state.name.lower() == User.lower() -%}
+          {%- if state.state == "home" -%}
+            {{ User }} is at home
+          {%- else -%}
+            {% set sensor_name = User.lower() + '_location_to_home' %}
+            {% set eta = states.sensor[sensor_name].state %}
+            
+            {%- if state.state == "not_home" -%}
+              {{ User }} is {{ eta }} minutes from home
+            {%- else -%}
+              {{ User }} is at {{ state.state }}. {{ eta }} minutes from home.
+            {%- endif -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- else -%}
+        I am sorry, I do not know who {{ User }} is.
+      {%- endfor -%}

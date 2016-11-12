@@ -3,51 +3,62 @@ settings:
   view: yes
   icon: mdi:settings
   entities:
-    - group.global
-    - group.input_kitchen
-    - group.input_media
-    - group.input_notification
-    - group.input_amazon_dash
-    - group.wake_alarm
+    - group.global_settings
+    - group.notification_settings
+    - group.kitchen_settings
+    - group.living_room_settings
+    - group.office_settings
+    - group.master_bedroom_settings
+    - group.laundry_room_settings
 
 
 
-global:
-  name: global
+
+global_settings:
+  name: Global
   entities:
-    - input_boolean.house_away
-    - input_boolean.thermostat_auto
+    - automation.arriving_home
+    - automation.nobody_home
+    - automation.nest_while_home
 
-
-wake_alarm:
-  name: Wake Alarm
-  entities:
-    - input_boolean.work_alarm
-    - input_select.work_alarm_time
-
-input_kitchen:
-  name: Kitchen
-  entities:
-    - input_boolean.kitchen_all_off
-    - input_boolean.kitchen_study_auto
-    - input_select.kitchen_study_on_time
-    - input_select.kitchen_study_off_time
-
-input_notification:
+notification_settings:
   name: Notifications
   entities:
-    - input_boolean.new_device
-    - input_boolean.leaving_work
+    - automation.brent_leave_work
+    - automation.emma_leave_home
+    - automation.front_door_motion
+    - automation.driveway_motion
 
-input_media:
-  name: Media Lighting
+master_bedroom_settings:
+  name: Master Bedroom
   entities:
-    - input_boolean.media_living
-    - input_boolean.media_office
+    - automation.wakeup__work
 
-input_amazon_dash:
-  name: Dash Buttons
+kitchen_settings:
+  name: Kitchen
   entities:
-    - input_boolean.on_master_light
-    - input_boolean.dixie_theater
-    - input_boolean.gatorade_office_light
+    - automation.kitchen_study_off
+    - automation.kitchen_study_on
+
+living_room_settings:
+  name: Living Room
+  entities:
+    - automation.living_room_chromecast_pausedstopped
+    - automation.living_room_chromecast_playing
+    - automation.living_room_roku_pausedstopped
+    - automation.living_room_roku_playing
+
+office_settings:
+  name: Office
+  entities:
+    - automation.office_chromecast_pausedstopped
+    - automation.office_chromecast_playing
+    - automation.office_roku_no_video
+    - automation.office_roku_playing
+
+laundry_room_settings:
+  name: Laundry Room
+  entities:
+    - automation.turn_on_laundry_room_light_for_10_minutes
+    - automation.turn_on_laundry_room_light_when_brent_arrives_home
+    - automation.turn_on_laundry_room_light_when_emma_arrives_home

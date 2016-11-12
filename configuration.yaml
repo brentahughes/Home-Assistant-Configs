@@ -52,6 +52,14 @@ statsd:
   rate: 1
   log_attributes: true
 
+emulated_hue:
+  host_ip: 192.168.1.10
+  expose_by_default: true
+  exposed_domains:
+    - light
+    - switch
+    - scene
+    - script
 
 
 
@@ -62,14 +70,14 @@ zone 1:
   name: Home
   latitude: !env_var HOME_LATITUDE
   longitude: !env_var HOME_LONGITUDE
-  radius: 300
+  radius: 500
   icon: mdi:home
 
 zone 2:
   name: Brent Work
   latitude: !env_var BRENT_WORK_LATITUDE
   longitude: !env_var BRENT_WORK_LONGITUDE
-  radius: 300
+  radius: 500
   icon: mdi:briefcase
 
 
@@ -87,10 +95,36 @@ scene: !include includes/scenes.yaml
 notify: !include includes/notify.yaml
 script: !include_dir_named includes/scripts
 automation: !include_dir_merge_list includes/automation
-input_boolean: !include includes/input_boolean.yaml
 camera: !include includes/cameras.yaml
 
+alexa:
+  intents: !include_dir_merge_named includes/alexa
 
+
+
+
+
+
+###########
+# IFrames #
+###########
+panel_iframe:
+  router:
+    title: EdgeRouter X
+    url: 'https://192.168.1.1'
+    icon: 'mdi:switch'
+  wifi:
+    title: Ubiquiti Wifi
+    url: 'https://192.168.1.10:8443/manage/s/default/dashboard'
+    icon: 'mdi:wifi'
+  cameras:
+    title: Cameras
+    url: 'https://192.168.1.10/cam'
+    icon: 'mdi:camcorder'
+  grafana:
+    title: Grafana
+    url: 'https://192.168.1.10/stats'
+    icon: 'mdi:chart-areaspline'
 
 
 
@@ -102,12 +136,15 @@ logger:
   logs:
     homeassistant: !env_var HA_LOG_LEVEL
     homeassistant.core: error
+    homeassistant.bootstrap: error
+    homeassistant.components.http: error
     homeassistant.components.api: error
     homeassistant.components.recorder: error
-    homeassistant.components.device_tracker.nmap_tracker: error
+    homeassistant.components.device_tracker: error
     homeassistant.components.statsd: error
     homeassistant.components.mqtt: error
     homeassistant.components.sensor.command_line: error
+    homeassistant.components.zwave: error
     homeassistant.components.sensor.google_travel_time: error
 
 discovery:

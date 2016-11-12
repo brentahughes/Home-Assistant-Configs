@@ -1,7 +1,7 @@
 - platform: mjpeg
-  mjpeg_url: http://192.168.1.11/cgi-bin/nph-zms?mode=jpeg&monitor=3&maxfps=15
+  mjpeg_url: !env_var CAMERA_FRONT_DOOR
   name: Front Door
 
-# - platform: generic
-#   still_image_url: http://192.168.1.41/cgi-bin/snapshot.cgi
-#   name: Driveway
+- platform: mjpeg
+  mjpeg_url: !env_var CAMERA_DRIVEWAY
+  name: Driveway

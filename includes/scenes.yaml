@@ -104,21 +104,10 @@
 
 - name: Kitchen Nightlight
   entities:
-    light.kitchen_lights_level_3:
+    light.kitchen_lights_level_3_0:
       state: on
       brightness: 25
-    light.kitchen_study_level_6:
+    light.kitchen_study_level_6_0:
       state: off
-    light.dining_lights_level_4:
-      state: off
-
-- name: Kitchen Eating
-  entities:
-    light.dining_lights_level_4:
-      state: on
-      brightness: 255
-    light.kitchen_lights_level_3:
-      state: on
-      brightness: 100
-    light.kitchen_study_level_6:
+    light.dining_lights_level_4_0:
       state: off
