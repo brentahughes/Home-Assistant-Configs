@@ -20,16 +20,13 @@
     platform: time
     after: "19:00:00"
   action:
-    service: light.turn_on
-    entity_id: light.kitchen_study_level_6_0
-    data:
-      brightness: 25
+    service: script.turn_on_kitchen_study_for_2_hours
 
 
-- alias: "Kitchen Study Off"
+- alias: "Turn on laundry room light with motion"
   trigger:
-    platform: time
-    after: "07:00:00"
+    - platform: state
+      entity_id: binary_sensor.__sensor_9_0
+      to: 'on'
   action:
-    service: light.turn_off
-    entity_id: light.kitchen_study_level_6_0
+    service: script.turn_on_laundry_room_for_5_minutes

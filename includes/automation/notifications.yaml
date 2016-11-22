@@ -39,11 +39,12 @@
       message: >
         Emma has left the house.
       data:
-        url: "https://192.168.1.10/home/map"
+        url: "https://home.brentahughes.com/map"
       target:
         - brent_macbookpro
         - brent_phone
         - brent_work_macbookpro
+
 
 - alias: "Front Door Motion"
   trigger:
@@ -56,12 +57,13 @@
       title: "Front Door Movement"
       message: "Motion captured at front door"
       data:
-        url: "https://192.168.1.10/cam"
+        url: "https://cam.brentahughes.com"
         tag: 'front_door_motion'
       target:
         - brent_macbookpro
         - brent_phone
         - brent_work_macbookpro
+
 
 - alias: "Driveway Motion"
   trigger:
@@ -74,9 +76,20 @@
       title: "Driveway Movement"
       message: "Motion captured in driveway"
       data:
-        url: "https://192.168.1.10/cam"
+        url: "https://cam.brentahughes.com"
         tag: 'driveway_motion'
       target:
         - brent_macbookpro
         - brent_phone
         - brent_work_macbookpro
+
+- alias: "Laundry Room Motion Sensor Battery Low"
+  trigger:
+    - platform: template
+      value_template: "{% if states.sensor.__alarm_level_9_1.attributes.battery_level < 10 %}true{% endif %}"
+  action:
+    service: notify.slack
+    data_template:
+      message: >
+        Laundry Room Motion Battery Low
+      target: "@bah2830"

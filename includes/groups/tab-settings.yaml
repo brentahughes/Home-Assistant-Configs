@@ -28,6 +28,7 @@ notification_settings:
     - automation.emma_leave_home
     - automation.front_door_motion
     - automation.driveway_motion
+    - automation.laundry_room_motion_sensor_battery_low
 
 master_bedroom_settings:
   name: Master Bedroom
@@ -37,28 +38,19 @@ master_bedroom_settings:
 kitchen_settings:
   name: Kitchen
   entities:
-    - automation.kitchen_study_off
     - automation.kitchen_study_on
 
 living_room_settings:
   name: Living Room
   entities:
-    - automation.living_room_chromecast_pausedstopped
-    - automation.living_room_chromecast_playing
-    - automation.living_room_roku_pausedstopped
-    - automation.living_room_roku_playing
+    - automation.living_room_media
 
 office_settings:
   name: Office
   entities:
-    - automation.office_chromecast_pausedstopped
-    - automation.office_chromecast_playing
-    - automation.office_roku_no_video
-    - automation.office_roku_playing
+    - automation.office_media
 
 laundry_room_settings:
   name: Laundry Room
   entities:
-    - automation.turn_on_laundry_room_light_for_10_minutes
-    - automation.turn_on_laundry_room_light_when_brent_arrives_home
-    - automation.turn_on_laundry_room_light_when_emma_arrives_home
+    - automation.turn_on_laundry_room_light_with_motion

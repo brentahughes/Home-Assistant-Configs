@@ -36,9 +36,10 @@ nest:
 
 mqtt:
   broker: 192.168.1.10
-  port: 1883
+  port: 8883
   username: !env_var MQTT_USERNAME
   password: !env_var MQTT_PASSWORD
+  certificate: /certs/ca.crt
 
 zwave:
   usb_path: /dev/zwave
@@ -59,7 +60,6 @@ emulated_hue:
     - light
     - switch
     - scene
-    - script
 
 
 

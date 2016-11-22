@@ -1,0 +1,9 @@
+alias: "Turn on laundry room for 5 minutes"
+sequence:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.utility_room_switch_5_0
+  - delay: '00:05:00'
+  - service: switch.turn_off
+    data:
+      entity_id: switch.utility_room_switch_5_0

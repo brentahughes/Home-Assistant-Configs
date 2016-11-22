@@ -7,6 +7,7 @@ rooms:
     - group.office_lighting
     - media_player.roku_1gn387145507
     - media_player.roku_3__1gn387145507
+    - media_player.office
 
 
 
@@ -36,11 +37,17 @@ master_bedroom_lights:
   entities:
     - light.master_lights_level_2_0
 
+master_bedroom_outlets:
+  name: Master Bedroom Outlet
+  entities:
+    - switch.master_bedroom_o_switch_10_0
+
 master_bedroom_lighting:
   name: Master Bedroom Lighting
   entities:
     - group.master_bedroom_lights
     - group.master_bedroom_bathroom
+    - group.master_bedroom_outlets
     - group.master_hallway
     - scene.master_normal
     - scene.master_relax

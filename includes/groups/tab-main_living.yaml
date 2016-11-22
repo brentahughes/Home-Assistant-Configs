@@ -9,7 +9,8 @@ main_living:
     - media_player.lgroku_tv__2n0069550469
     - group.kitchen_lights
     - group.kitchen_lighting
-    - group.utility_lights
+    - group.laundry_room_lights
+    - group.laundry_room_sensors
 
 
 
@@ -44,7 +45,12 @@ kitchen_lighting:
     - scene.kitchen_normal
     - scene.kitchen_nightlight
 
-utility_lights:
-  name: Utility Lights
+laundry_room_lights:
+  name: Laundry Room Lights
   entities:
     - switch.utility_room_switch_5_0
+
+laundry_room_sensors:
+  name: Laundry Room Sensors
+  entities:
+    - binary_sensor.__sensor_9_0

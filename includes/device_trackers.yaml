@@ -1,6 +1,1 @@
 - platform: owntracks
-
-- platform: snmp
-  host: 192.168.1.1
-  community: !env_var ROUTER_SNMP_COMMUNITY
-  baseoid: 1.3.6.1.2.1.4.22.1.2
