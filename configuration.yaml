@@ -104,30 +104,6 @@ alexa:
 
 
 
-
-###########
-# IFrames #
-###########
-panel_iframe:
-  router:
-    title: EdgeRouter X
-    url: 'https://192.168.1.1'
-    icon: 'mdi:switch'
-  wifi:
-    title: Ubiquiti Wifi
-    url: 'https://192.168.1.10:8443/manage/s/default/dashboard'
-    icon: 'mdi:wifi'
-  cameras:
-    title: Cameras
-    url: 'https://192.168.1.10/cam'
-    icon: 'mdi:camcorder'
-  grafana:
-    title: Grafana
-    url: 'https://192.168.1.10/stats'
-    icon: 'mdi:chart-areaspline'
-
-
-
 ##########
 # EXTRAS #
 ##########
@@ -147,7 +123,7 @@ logger:
     homeassistant.components.zwave: error
     homeassistant.components.sensor.google_travel_time: error
 
-discovery:
+
 frontend:
 history:
 logbook:
