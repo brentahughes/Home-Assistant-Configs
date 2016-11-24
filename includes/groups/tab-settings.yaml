@@ -10,6 +10,7 @@ settings:
     - group.office_settings
     - group.master_bedroom_settings
     - group.laundry_room_settings
+    - group.dash_buttons
 
 
 
@@ -54,3 +55,10 @@ laundry_room_settings:
   name: Laundry Room
   entities:
     - automation.turn_on_laundry_room_light_with_motion
+
+
+dash_buttons:
+  name: Dash Buttons
+  entities:
+    - automation.dash_button__gatorade
+    - automation.dash_button__on
