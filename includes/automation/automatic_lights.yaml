@@ -1,18 +1,17 @@
 - alias: "Wakeup - Work"
   trigger:
-    platform: time
-    after: "06:00:00"
-  condition:
-    - condition: time
-      weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
+    platform: template
+    value_template: >
+      {% set start_time = strptime(states.calendar.working.attributes.start_time, '%Y-%m-%d %H:%M:%S') %}
+
+      {% if start_time.strftime('%Y%m%d') == now().strftime('%Y%m%d') %}
+        {% if start_time.strftime('%H')|float|round - 1 == now().strftime('%H')|round %}
+          true
+        {% endif %}
+      {% endif %}
   action:
     service: script.turn_on
-    entity_id: script.master_6am_wakeup_weekday
+    entity_id: script.master_wakeup
 
 
 - alias: "Kitchen Study On"

@@ -61,6 +61,10 @@ emulated_hue:
     - switch
     - scene
 
+google:
+  client_id: !env_var GOOGLE_OAUTH_CLIENT_ID
+  client_secret: !env_var GOOGLE_OAUTH_CLIENT_SECRET
+  track_new_calendar: false
 
 
 #########

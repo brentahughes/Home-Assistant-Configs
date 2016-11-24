@@ -1,0 +1,15 @@
+- alias: "Dash Button - Gatorade"
+  trigger:
+    platform: mqtt
+    topic: network/arp/f0:27:2d:9e:2d:2a
+  action:
+    service: homeassistant.toggle
+    entity_id: group.office_lights
+
+- alias: "Dash Button - On"
+  trigger:
+    platform: mqtt
+    topic: network/arp/44:65:0d:1c:4f:45
+  action:
+    service: switch.toggle
+    entity_id: switch.master_bedroom_o_switch_10_0

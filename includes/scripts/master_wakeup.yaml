@@ -1,4 +1,4 @@
-alias: Work Day Wakeup
+alias: Master Wakeup
 sequence:
   # Sweep light brightness up to full brightness
   - service: light.turn_on
