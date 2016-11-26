@@ -59,7 +59,6 @@ emulated_hue:
   exposed_domains:
     - light
     - switch
-    - scene
 
 google:
   client_id: !env_var GOOGLE_OAUTH_CLIENT_ID
@@ -128,6 +127,20 @@ logger:
     homeassistant.components.sensor.google_travel_time: error
 
 
+logbook:
+  exclude:
+    entities:
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_precip
+      - sensor.dark_sky_precip_probability
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_temperature
+    domains:
+      - group
+
+
+
 frontend:
 history:
-logbook:

@@ -1,8 +1,0 @@
-alias: Theater Mode On
-sequence:
-  - service: scene.turn_on
-    data:
-      entity_id: scene.living_movie
-  - service: light.turn_off
-    data:
-      entity_id: group.kitchen_lights

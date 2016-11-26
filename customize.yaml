@@ -1,8 +1,29 @@
+# Binary Sensors
+binary_sensor.__sensor_9_0:
+  friendly_name: "Laundry Room Motion"
+
+
+# Climate
+climate.thermostat:
+  friendly_name: "Nest Thermostat"
+
+
 # Device Trackers
 device_tracker.bhughes_nexus6:
   entity_picture: /local/brent.jpg
   friendly_name: Brent
 device_tracker.bhughes_emma_phone:
+  entity_picture: /local/emma.jpg
+  friendly_name: Emma
+
+
+# Groups
+group.all_automations:
+  hidden: false
+group.brent:
+  entity_picture: /local/brent.jpg
+  friendly_name: Brent
+group.emma:
   entity_picture: /local/emma.jpg
   friendly_name: Emma
 
@@ -26,14 +47,44 @@ light.master_bathroom_level_7_0:
 light.master_hallway_level_8_0:
   friendly_name: "Master Hallway"
   assumed_state: True
+light.living__bl:
+  emulated_hue: false
+light.living__br:
+  emulated_hue: false
+light.living__fl:
+  emulated_hue: false
+light.living__fr:
+  emulated_hue: false
+light.office__closet:
+  emulated_hue: false
+light.office__desks:
+  emulated_hue: false
+light.office__tv:
+  emulated_hue: false
+light.office__window:
+  emulated_hue: false
 
 
-# Switches
-switch.utility_room_switch_5_0:
-  friendly_name: "Laundry Room Light"
-  assumed_state: True
-switch.master_bedroom_o_switch_10_0:
-  friendly_name: "Master Bedroom Outlet"
+# Media Players
+media_player.living_room:
+  friendly_name: "Living - Chromecast"
+media_player.roku_2n0069550469:
+  friendly_name: "Living - Roku TV"
+media_player.lgroku_tv__2n0069550469:
+  friendly_name: "Living - Plex"
+media_player.master_bedroom:
+  friendly_name: "Master Bedroom - Chromecast"
+media_player.office:
+  friendly_name: "Office - Chromecast"
+media_player.roku_1gn387145507:
+  friendly_name: "Office - Roku"
+media_player.roku_3__1gn387145507:
+  friendly_name: "Office - Plex"
+
+
+# Scripts
+script.theater:
+  emulated_hue: true
 
 
 # Sensors
@@ -59,79 +110,12 @@ sensor.dark_sky_precip_probability:
   friendly_name: "Precip Probability"
 
 
-# Binary Sensors
-binary_sensor.__sensor_9_0:
-  friendly_name: "Laundry Room Motion"
-
-# Climate
-climate.thermostat:
-  friendly_name: "Nest Thermostat"
-
-
-
-# Media Players
-media_player.living_room:
-  friendly_name: "Living - Chromecast"
-media_player.roku_2n0069550469:
-  friendly_name: "Living - Roku TV"
-media_player.lgroku_tv__2n0069550469:
-  friendly_name: "Living - Plex"
-media_player.master_bedroom:
-  friendly_name: "Master Bedroom - Chromecast"
-media_player.office:
-  friendly_name: "Office - Chromecast"
-media_player.roku_1gn387145507:
-  friendly_name: "Office - Roku"
-media_player.roku_3__1gn387145507:
-  friendly_name: "Office - Plex"
-
-
-
-
-# Scenes
-scene.kitchen_eating:
-  emulated_hue: false
-scene.kitchen_nightlight:
-  emulated_hue: false
-scene.kitchen_normal:
-  emulated_hue: false
-scene.living_dim:
-  emulated_hue: false
-scene.living_movie:
-  emulated_hue: true
-scene.living_normal:
-  emulated_hue: true
-scene.master_normal:
-  emulated_hue: false
-scene.master_relax:
-  emulated_hue: false
-scene.office_dim:
-  emulated_hue: false
-scene.office_normal:
-  emulated_hue: false
-scene.office_tv:
-  emulated_hue: false
-scene.working:
-  emulated_hue: false
-
-
-
-# Scripts
-script.theater_mode_on:
-  emulated_hue: true
-  emulated_hue_name: "theater"
-
-
-
-# Groups
-group.all_automations:
-  hidden: false
-group.brent:
-  entity_picture: /local/brent.jpg
-  friendly_name: Brent
-group.emma:
-  entity_picture: /local/emma.jpg
-  friendly_name: Emma
+# Switches
+switch.laundry_lights_switch_5_0:
+  friendly_name: "Laundry Room Light"
+  assumed_state: True
+switch.outlet_1_switch_10_0:
+  friendly_name: "Master Bedroom Outlet"
 
 
 

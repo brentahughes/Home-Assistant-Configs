@@ -3,8 +3,7 @@ sequence:
   - service: light.turn_on
     data:
       entity_id: light.kitchen_study_level_6_0
-      data:
-        brightness: 35
+      brightness: 35
   - delay: '02:00:00'
   - service: light.turn_off
     data:

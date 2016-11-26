@@ -86,7 +86,7 @@
 - alias: "Laundry Room Motion Sensor Battery Low"
   trigger:
     - platform: template
-      value_template: "{% if states.sensor.__alarm_level_9_1.attributes.battery_level < 10 %}true{% endif %}"
+      value_template: "{% if states.binary_sensor.__sensor_9_0.attributes.battery_level < 10 %}true{% endif %}"
   action:
     service: notify.slack
     data_template:

@@ -48,7 +48,7 @@ kitchen_lighting:
 laundry_room_lights:
   name: Laundry Room Lights
   entities:
-    - switch.utility_room_switch_5_0
+    - switch.laundry_lights_switch_5_0
 
 laundry_room_sensors:
   name: Laundry Room Sensors

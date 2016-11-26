@@ -2,4 +2,4 @@ IndoorTempIntent:
   speech:
     type: plaintext
     text: >
-      The current indoor temperature is {{ states.climate.thermostat.attributes.current_temperature }} degrees
+      The current indoor temperature is {{ states.climate.thermostat.attributes.current_temperature|round }} degrees

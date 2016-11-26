@@ -12,4 +12,4 @@
     topic: network/arp/44:65:0d:1c:4f:45
   action:
     service: switch.toggle
-    entity_id: switch.master_bedroom_o_switch_10_0
+    entity_id: switch.outlet_1_switch_10_0
