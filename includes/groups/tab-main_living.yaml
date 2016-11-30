@@ -11,6 +11,7 @@ main_living:
     - group.kitchen_lighting
     - group.laundry_room_lights
     - group.laundry_room_sensors
+    - group.living_room_outlets
 
 
 
@@ -30,6 +31,11 @@ living_lighting:
     - scene.living_normal
     - scene.living_movie
     - scene.living_dim
+
+living_room_outlets:
+ name: Living Room Outlets
+ entities:
+   switch.app_outlet_1_switch_10_0
 
 # KITCHEN
 kitchen_lights:

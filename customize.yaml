@@ -47,6 +47,8 @@ light.master_bathroom_level_7_0:
 light.master_hallway_level_8_0:
   friendly_name: "Master Hallway"
   assumed_state: True
+light.lamp_outlet_1_level_11_0:
+  friendly_name: "Master Bedroom Lamp"
 light.living__bl:
   emulated_hue: false
 light.living__br:
@@ -114,8 +116,8 @@ sensor.dark_sky_precip_probability:
 switch.laundry_lights_switch_5_0:
   friendly_name: "Laundry Room Light"
   assumed_state: True
-switch.outlet_1_switch_10_0:
-  friendly_name: "Master Bedroom Outlet"
+switch.app_outlet_1_switch_10_0:
+  friendly_name: "Christmas Tree"
 
 
 

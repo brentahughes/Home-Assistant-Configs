@@ -29,3 +29,11 @@
       to: 'on'
   action:
     service: script.turn_on_laundry_room_for_5_minutes
+
+
+- alias: "Automatic Christmas Tree Lights"
+  trigger:
+    - platform: time
+      after: "17:00:00"
+  action:
+    service: script.turn_on_christmas_tree_for_5_hours

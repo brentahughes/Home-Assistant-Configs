@@ -1,7 +1,7 @@
 - alias: "Dash Button - Gatorade"
   trigger:
     platform: mqtt
-    topic: network/arp/f0:27:2d:9e:2d:2a
+    topic: dash-button/gatorade
   action:
     service: homeassistant.toggle
     entity_id: group.office_lights
@@ -9,7 +9,7 @@
 - alias: "Dash Button - On"
   trigger:
     platform: mqtt
-    topic: network/arp/44:65:0d:1c:4f:45
+    topic: dash-button/on
   action:
-    service: switch.toggle
-    entity_id: switch.outlet_1_switch_10_0
+    service_template: light.toggle
+    entity_id: light.lamp_outlet_1_level_11_0

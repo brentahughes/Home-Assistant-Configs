@@ -1,0 +1,9 @@
+alias: "Turn on christmas tree for 5 hours"
+sequence:
+  - service: light.turn_on
+    data:
+      entity_id: switch.app_outlet_1_switch_10_0
+  - delay: '05:00:00'
+  - service: light.turn_off
+    data:
+      entity_id: switch.app_outlet_1_switch_10_0

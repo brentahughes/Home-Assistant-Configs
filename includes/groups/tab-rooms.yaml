@@ -40,7 +40,7 @@ master_bedroom_lights:
 master_bedroom_outlets:
   name: Master Bedroom Outlet
   entities:
-    - switch.outlet_1_switch_10_0
+    - light.lamp_outlet_1_level_11_0
 
 master_bedroom_lighting:
   name: Master Bedroom Lighting
