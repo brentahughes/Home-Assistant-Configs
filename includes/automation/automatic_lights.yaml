@@ -25,7 +25,7 @@
 - alias: "Turn on laundry room light with motion"
   trigger:
     - platform: state
-      entity_id: binary_sensor.__sensor_9_0
+      entity_id: binary_sensor.ecolink_pir_motion_sensor_sensor_9_0
       to: 'on'
   action:
     service: script.turn_on_laundry_room_for_5_minutes

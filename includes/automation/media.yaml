@@ -1,4 +1,5 @@
 - alias: "Living Room Media"
+  initial_state: False
   trigger:
     - platform: state
       entity_id: media_player.living_room, media_player.roku_2n0069550469, media_player.lgroku_tv__2n0069550469
@@ -17,6 +18,7 @@
 
 
 - alias: "Office Media"
+  initial_state: False
   trigger:
     - platform: state
       entity_id: media_player.office, media_player.roku_1gn387145507, media_player.roku_3__1gn387145507

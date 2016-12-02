@@ -1,5 +1,5 @@
 # Binary Sensors
-binary_sensor.__sensor_9_0:
+binary_sensor.ecolink_pir_motion_sensor_sensor_9_0:
   friendly_name: "Laundry Room Motion"
 
 

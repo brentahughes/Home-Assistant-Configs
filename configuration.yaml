@@ -31,8 +31,8 @@ climate:
   platform: nest
 
 nest:
-  username: !env_var NEST_EMAIL
-  password: !env_var NEST_PASSWORD
+  client_id: !env_var NEST_EMAIL
+  client_secret: !env_var NEST_PASSWORD
 
 mqtt:
   broker: 192.168.1.10
@@ -46,12 +46,14 @@ zwave:
   config_path: /usr/local/share/python-openzwave/config
   polling_interval: 40000
 
-statsd:
+influxdb:
   host: 192.168.1.10
-  port: 8125
-  prefix: !env_var STATSD_PREFIX
-  rate: 1
-  log_attributes: true
+  username: homeassistant
+  password: !env_var INFLUXDB_PASSWORD
+  database: homeassistant
+  tags:
+    instance: !env_var INFLUXDB_INSTANCE
+    source: hass
 
 emulated_hue:
   host_ip: 192.168.1.10
@@ -125,6 +127,7 @@ logger:
     homeassistant.components.sensor.command_line: error
     homeassistant.components.zwave: error
     homeassistant.components.sensor.google_travel_time: error
+    homeassistant.components.websocket_api: error
 
 
 logbook:
