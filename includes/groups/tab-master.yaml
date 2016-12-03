@@ -1,0 +1,43 @@
+master:
+  name: Master
+  view: yes
+  entities:
+    - group.master_bedroom_lights
+    - group.master_bedroom_outlets
+    - group.master_bedroom_bathroom
+    - group.master_hallway
+    - group.master_scenes
+    - group.master_media
+
+
+
+master_bedroom_lights:
+  name: Master Bedroom Lights
+  entities:
+    - light.master_lights_level_2_0
+
+master_bedroom_outlets:
+  name: Master Bedroom Outlet
+  entities:
+    - light.lamp_outlet_1_level_11_0
+
+master_bedroom_bathroom:
+  name: Master Bathroom
+  entities:
+    - light.master_bathroom_level_7_0
+
+master_hallway:
+  name: Master Hallway
+  entities:
+    - light.master_hallway_level_8_0
+
+master_scenes:
+  name: Master Scenes
+  entities:
+    - scene.master_normal
+    - scene.master_relax
+
+master_media:
+  name: Master Media
+  entities:
+    - media_player.master_bedroom

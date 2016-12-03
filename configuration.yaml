@@ -11,6 +11,7 @@ homeassistant:
 http:
   api_password: !env_var HA_PASSWORD
   server_port: 8123
+  trusted_networks: []
 
 recorder:
   db_url: !env_var MYSQL_CONNECTION_STRING
@@ -31,8 +32,8 @@ climate:
   platform: nest
 
 nest:
-  client_id: !env_var NEST_EMAIL
-  client_secret: !env_var NEST_PASSWORD
+  client_id: !env_var NEST_CLIENT_ID
+  client_secret: !env_var NEST_CLIENT_SECRET
 
 mqtt:
   broker: 192.168.1.10

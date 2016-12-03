@@ -1,0 +1,33 @@
+office:
+  name: Office
+  view: yes
+  entities:
+    - group.office_lights
+    - group.office_scenes
+    - group.office_media
+
+
+
+
+office_lights:
+  name: Office Lights
+  entities:
+    - light.office__closet
+    - light.office__desks
+    - light.office__tv
+    - light.office__window
+
+office_scenes:
+  name: Office Scenes
+  entities:
+    - scene.working
+    - scene.office_normal
+    - scene.office_dim
+    - scene.office_tv
+
+office_media:
+  name: Office Media
+  entities:
+    - media_player.roku_1gn387145507
+    - media_player.roku_3__1gn387145507
+    - media_player.office

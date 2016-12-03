@@ -128,8 +128,10 @@ group.home:
   order: 1
 group.main_living:
   order: 2
-group.rooms:
+group.master:
   order: 3
+group.office:
+  order: 4
 group.settings:
   order: 5
 
